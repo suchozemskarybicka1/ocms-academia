@@ -1,0 +1,17 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table adrian_studentlogger_'
+    - builder_table_create_adrian_studentlogger_.php
+1.0.3:
+    - 'Drop table adrian_studentlogger_'
+    - builder_table_delete_adrian_studentlogger_.php
+1.0.4:
+    - 'Created table adrian_studentlogger_'
+    - builder_table_create_adrian_studentlogger__2.php
+1.0.5:
+    - 'Updated table adrian_studentlogger_'
+    - builder_table_update_adrian_studentlogger_.php
+1.0.6:
+    - 'Updated table adrian_studentlogger_'
+    - builder_table_update_adrian_studentlogger__2.php

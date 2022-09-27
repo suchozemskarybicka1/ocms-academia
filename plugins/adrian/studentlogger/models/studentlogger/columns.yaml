@@ -1,0 +1,14 @@
+columns:
+    name:
+        label: Name
+        type: text
+        searchable: true
+        sortable: true
+    arrive:
+        label: Arrive
+        type: datetime
+        sortable: true
+    late:
+        label: Late
+        type: number
+        sortable: true
