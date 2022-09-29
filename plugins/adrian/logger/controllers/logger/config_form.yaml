@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Logger
+
+# Model Form Field configuration
+form: $/adrian/logger/models/logger/fields.yaml
+
+# Model Class name
+modelClass: Adrian\Logger\Models\Logger
+
+# Default redirect location
+defaultRedirect: adrian/logger/logger
+
+# Create page
+create:
+    title: Create Logger
+    redirect: adrian/logger/logger/update/:id
+    redirectClose: adrian/logger/logger
+
+# Update page
+update:
+    title: Edit Logger
+    redirect: adrian/logger/logger
+    redirectClose: adrian/logger/logger
+
+# Preview page
+preview:
+    title: Preview Logger

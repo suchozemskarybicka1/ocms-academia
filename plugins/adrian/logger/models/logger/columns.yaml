@@ -7,6 +7,7 @@ columns:
         label: ID
         searchable: true
     name:
-        label: 'Student name'
-        span: full
+        label: Name
         type: text
+        searchable: true
+        sortable: true

@@ -1,0 +1,16 @@
+title = "Logger"
+url = "/logger"
+layout = "default"
+is_hidden = 0
+
+[builderList]
+modelClass = "Adrian\Logger\Models\Logger"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% component 'builderList' %}

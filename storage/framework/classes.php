@@ -86,4 +86,6 @@
   'RainLab\\Builder\\Components\\RecordDetails' => 'plugins\\rainlab\\builder\\components\\RecordDetails.php',
   'RainLab\\Builder\\Classes\\ComponentHelper' => 'plugins\\rainlab\\builder\\classes\\ComponentHelper.php',
   'adrian\\logger\\Plugin' => 'plugins\\adrian\\logger\\Plugin.php',
+  'adrian\\logger\\Controllers\\logger' => 'plugins\\adrian\\logger\\controllers\\logger.php',
+  'Adrian\\Logger\\Models\\Logger' => 'plugins\\adrian\\logger\\models\\Logger.php',
 );
