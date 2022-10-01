@@ -88,4 +88,5 @@
   'adrian\\logger\\Plugin' => 'plugins\\adrian\\logger\\Plugin.php',
   'adrian\\logger\\Controllers\\logger' => 'plugins\\adrian\\logger\\controllers\\logger.php',
   'Adrian\\Logger\\Models\\Logger' => 'plugins\\adrian\\logger\\models\\Logger.php',
+  'adrian\\arrivallogger\\Plugin' => 'plugins\\adrian\\arrivallogger\\Plugin.php',
 );

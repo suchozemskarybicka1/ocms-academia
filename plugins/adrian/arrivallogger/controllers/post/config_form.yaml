@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Post
+
+# Model Form Field configuration
+form: $/adrian/arrivallogger/models/post/fields.yaml
+
+# Model Class name
+modelClass: Adrian\ArrivalLogger\Models\Post
+
+# Default redirect location
+defaultRedirect: adrian/arrivallogger/post
+
+# Create page
+create:
+    title: Create Post
+    redirect: adrian/arrivallogger/post/update/:id
+    redirectClose: adrian/arrivallogger/post
+
+# Update page
+update:
+    title: Edit Post
+    redirect: adrian/arrivallogger/post
+    redirectClose: adrian/arrivallogger/post
+
+# Preview page
+preview:
+    title: Preview Post
