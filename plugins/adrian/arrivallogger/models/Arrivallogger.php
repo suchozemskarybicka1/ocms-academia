@@ -1,18 +1,18 @@
-<?php namespace Adrian\ArrivalLogger\Models;
+<?php namespace Adrian\Arrivallogger\Models;
 
 use Model;
 
 /**
- * Post Model
+ * Arrivallogger Model
  */
-class Post extends Model
+class Arrivallogger extends Model
 {
     use \October\Rain\Database\Traits\Validation;
 
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'adrian_arrivallogger_posts';
+    public $table = 'adrian_arrivallogger_arrivalloggers';
 
     /**
      * @var array Guarded fields

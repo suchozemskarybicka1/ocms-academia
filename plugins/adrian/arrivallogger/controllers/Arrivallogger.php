@@ -1,12 +1,12 @@
-<?php namespace Adrian\ArrivalLogger\Controllers;
+<?php namespace Adrian\Arrivallogger\Controllers;
 
 use BackendMenu;
 use Backend\Classes\Controller;
 
 /**
- * Post Back-end Controller
+ * Arrivallogger Back-end Controller
  */
-class Post extends Controller
+class Arrivallogger extends Controller
 {
     /**
      * @var array Behaviors that are implemented by this controller.
@@ -30,6 +30,6 @@ class Post extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Adrian.ArrivalLogger', 'arrivallogger', 'post');
+        BackendMenu::setContext('Adrian.Arrivallogger', 'arrivallogger', 'arrivallogger');
     }
 }

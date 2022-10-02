@@ -1,10 +1,10 @@
-<?php namespace Adrian\ArrivalLogger;
+<?php namespace Adrian\Arrivallogger;
 
 use Backend;
 use System\Classes\PluginBase;
 
 /**
- * ArrivalLogger Plugin Information File
+ * Arrivallogger Plugin Information File
  */
 class Plugin extends PluginBase
 {
@@ -16,7 +16,7 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'ArrivalLogger',
+            'name'        => 'Arrivallogger',
             'description' => 'No description provided yet...',
             'author'      => 'Adrian',
             'icon'        => 'icon-leaf'
@@ -53,7 +53,7 @@ class Plugin extends PluginBase
         return []; // Remove this line to activate
 
         return [
-            'Adrian\ArrivalLogger\Components\MyComponent' => 'myComponent',
+            'Adrian\Arrivallogger\Components\MyComponent' => 'myComponent',
         ];
     }
 
@@ -68,7 +68,7 @@ class Plugin extends PluginBase
 
         return [
             'adrian.arrivallogger.some_permission' => [
-                'tab' => 'ArrivalLogger',
+                'tab' => 'Arrivallogger',
                 'label' => 'Some permission'
             ],
         ];
@@ -85,7 +85,7 @@ class Plugin extends PluginBase
 
         return [
             'arrivallogger' => [
-                'label'       => 'ArrivalLogger',
+                'label'       => 'Arrivallogger',
                 'url'         => Backend::url('adrian/arrivallogger/mycontroller'),
                 'icon'        => 'icon-leaf',
                 'permissions' => ['adrian.arrivallogger.*'],

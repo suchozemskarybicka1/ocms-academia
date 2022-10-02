@@ -3,16 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: $/adrian/arrivallogger/models/post/columns.yaml
+list: $/adrian/arrivallogger/models/arrivallogger/columns.yaml
 
 # Model Class name
-modelClass: Adrian\ArrivalLogger\Models\Post
+modelClass: Adrian\Arrivallogger\Models\Arrivallogger
 
 # List Title
-title: Manage Posts
+title: Manage Arrivalloggers
 
 # Link URL for each record
-recordUrl: adrian/arrivallogger/post/update/:id
+recordUrl: adrian/arrivallogger/arrivallogger/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records
