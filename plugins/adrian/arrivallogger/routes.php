@@ -4,7 +4,7 @@ use Adrian\Arrivallogger\Models\Arrivallogger;
 
 Route::get('students-arrival', function () {
 
-    return Arrivallogger::get();
+    return Arrivallogger::all();
 
 });
 
@@ -12,10 +12,7 @@ Route::get('students-arrival', function () {
 
 Route::get('add-arrival', function () {
 
-    Arrivallogger::create([
-        'name' => 'Stefan',
-        'late' => true
-    ]);
+    Arrivallogger::create(input());
 
     return 'Arrival added';
 

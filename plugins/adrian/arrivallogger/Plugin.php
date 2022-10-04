@@ -81,12 +81,12 @@ class Plugin extends PluginBase
      */
     public function registerNavigation()
     {
-        return []; // Remove this line to activate
+        // return []; // Remove this line to activate
 
         return [
             'arrivallogger' => [
                 'label'       => 'Arrivallogger',
-                'url'         => Backend::url('adrian/arrivallogger/mycontroller'),
+                'url'         => Backend::url('adrian/arrivallogger/arrivallogger'),
                 'icon'        => 'icon-leaf',
                 'permissions' => ['adrian.arrivallogger.*'],
                 'order'       => 500,
