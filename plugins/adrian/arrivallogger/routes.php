@@ -10,10 +10,10 @@ Route::get('students-arrival', function () {
 
 
 
-Route::get('add-arrival', function () {
+Route::post('add-arrival', function () {
 
-    Arrivallogger::create(input());
+    Arrivallogger::create(post());
 
     return 'Arrival added';
 
-});
+});php artisan plugin:remove

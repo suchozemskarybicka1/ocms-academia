@@ -1,10 +1,10 @@
-<?php namespace Adrian\Logger;
+<?php namespace Adrian\HookPlugin;
 
 use Backend;
 use System\Classes\PluginBase;
 
 /**
- * Logger Plugin Information File
+ * HookPlugin Plugin Information File
  */
 class Plugin extends PluginBase
 {
@@ -16,7 +16,7 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'Logger',
+            'name'        => 'HookPlugin',
             'description' => 'No description provided yet...',
             'author'      => 'Adrian',
             'icon'        => 'icon-leaf'
@@ -53,7 +53,7 @@ class Plugin extends PluginBase
         return []; // Remove this line to activate
 
         return [
-            'Adrian\Logger\Components\MyComponent' => 'myComponent',
+            'Adrian\HookPlugin\Components\MyComponent' => 'myComponent',
         ];
     }
 
@@ -67,8 +67,8 @@ class Plugin extends PluginBase
         return []; // Remove this line to activate
 
         return [
-            'adrian.logger.some_permission' => [
-                'tab' => 'Logger',
+            'adrian.hookplugin.some_permission' => [
+                'tab' => 'HookPlugin',
                 'label' => 'Some permission'
             ],
         ];
@@ -84,11 +84,11 @@ class Plugin extends PluginBase
         return []; // Remove this line to activate
 
         return [
-            'logger' => [
-                'label'       => 'Logger',
-                'url'         => Backend::url('adrian/logger/mycontroller'),
+            'hookplugin' => [
+                'label'       => 'HookPlugin',
+                'url'         => Backend::url('adrian/hookplugin/mycontroller'),
                 'icon'        => 'icon-leaf',
-                'permissions' => ['adrian.logger.*'],
+                'permissions' => ['adrian.hookplugin.*'],
                 'order'       => 500,
             ],
         ];

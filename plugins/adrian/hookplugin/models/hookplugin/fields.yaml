@@ -6,7 +6,3 @@ fields:
     id:
         label: ID
         disabled: true
-    name:
-        label: 'Student name'
-        span: full
-        type: text

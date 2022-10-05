@@ -1,14 +1,14 @@
-<?php namespace Adrian\Logger\Updates;
+<?php namespace Adrian\HookPlugin\Updates;
 
 use Schema;
 use October\Rain\Database\Schema\Blueprint;
 use October\Rain\Database\Updates\Migration;
 
-class CreateLoggersTable extends Migration
+class CreateHookPluginsTable extends Migration
 {
     public function up()
     {
-        Schema::create('adrian_logger_loggers', function (Blueprint $table) {
+        Schema::create('adrian_hookplugin_hook_plugins', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->timestamps();
@@ -17,6 +17,6 @@ class CreateLoggersTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('adrian_logger_loggers');
+        Schema::dropIfExists('adrian_hookplugin_hook_plugins');
     }
 }

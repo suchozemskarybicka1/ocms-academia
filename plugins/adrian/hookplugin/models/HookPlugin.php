@@ -1,30 +1,24 @@
-<?php namespace Adrian\Logger\Models;
+<?php namespace Adrian\HookPlugin\Models;
 
 use Model;
 
 /**
- * Logger Model
+ * HookPlugin Model
  */
-class Logger extends Model
+class HookPlugin extends Model
 {
     use \October\Rain\Database\Traits\Validation;
-
-    /*
-     * Disable timestamps by default.
-     * Remove this line if timestamps are defined in the database table.
-     */
-    // public $timestamps = false;
 
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'adrian_logger_loggers';
+    public $table = 'adrian_hookplugin_hook_plugins';
 
     /**
      * @var array Guarded fields
      */
     protected $guarded = ['*'];
-    
+
     /**
      * @var array Fillable fields
      */
