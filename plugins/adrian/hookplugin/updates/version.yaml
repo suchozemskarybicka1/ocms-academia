@@ -1,1 +1,4 @@
 1.0.1: First version of HookPlugin
+1.0.2:  
+  - 'create hook table'
+  - create_hook_plugins_table.php

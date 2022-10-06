@@ -1,5 +1,6 @@
 <?php namespace Adrian\Arrivallogger\Models;
 
+
 use Model;
 
 /**
