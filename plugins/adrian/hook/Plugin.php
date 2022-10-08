@@ -1,15 +1,18 @@
-<?php namespace Adrian\HookPlugin;
+<?php namespace Adrian\Hook;
 
 use Backend;
 use System\Classes\PluginBase;
-
-require 
+use Adrian\Arrivallogger\Models\Arrivallogger as ArrivalloggerModel;
+use Adrian\Arrivallogger\Controllers\Arrivallogger as ArrivalloggerControllers;
 
 /**
- * HookPlugin Plugin Information File
+ * Hook Plugin Information File
  */
 class Plugin extends PluginBase
 {
+
+    public $require = ['Adrian.Arrivallogger'];
+
     /**
      * Returns information about this plugin.
      *
@@ -18,7 +21,7 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'HookPlugin',
+            'name'        => 'Hook',
             'description' => 'No description provided yet...',
             'author'      => 'Adrian',
             'icon'        => 'icon-leaf'
@@ -42,6 +45,23 @@ class Plugin extends PluginBase
      */
     public function boot()
     {
+        ArrivalloggerModel::extend(function($model){
+            $model->hasOne['hook'] = ['Adrian\Hook\Models\Hook'];
+        });
+
+        ArrivalloggerControllers::extendFormFields(function($form){
+
+            $form->addTabFields([
+                'hook[desc]' => [
+                    'label' => 'Desc',
+                    'type' => 'textarea',
+                ],
+                'hook[skills]' => [
+                    'label' => 'Skills',
+                    'type' => 'textarea',
+                ],
+            ]);
+        });
 
     }
 
@@ -55,7 +75,7 @@ class Plugin extends PluginBase
         return []; // Remove this line to activate
 
         return [
-            'Adrian\HookPlugin\Components\MyComponent' => 'myComponent',
+            'Adrian\Hook\Components\MyComponent' => 'myComponent',
         ];
     }
 
@@ -69,8 +89,8 @@ class Plugin extends PluginBase
         return []; // Remove this line to activate
 
         return [
-            'adrian.hookplugin.some_permission' => [
-                'tab' => 'HookPlugin',
+            'adrian.hook.some_permission' => [
+                'tab' => 'Hook',
                 'label' => 'Some permission'
             ],
         ];
@@ -86,11 +106,11 @@ class Plugin extends PluginBase
         return []; // Remove this line to activate
 
         return [
-            'hookplugin' => [
-                'label'       => 'HookPlugin',
-                'url'         => Backend::url('adrian/hookplugin/mycontroller'),
+            'hook' => [
+                'label'       => 'Hook',
+                'url'         => Backend::url('adrian/hook/mycontroller'),
                 'icon'        => 'icon-leaf',
-                'permissions' => ['adrian.hookplugin.*'],
+                'permissions' => ['adrian.hook.*'],
                 'order'       => 500,
             ],
         ];

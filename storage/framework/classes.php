@@ -92,4 +92,7 @@
   'backend\\Controllers\\users' => 'modules\\backend\\controllers\\users.php',
   'adrian\\arrivallogger\\Controllers\\arrivallogger' => 'plugins\\adrian\\arrivallogger\\controllers\\arrivallogger.php',
   'Adrian\\Arrivallogger\\Models\\Arrivallogger' => 'plugins\\adrian\\arrivallogger\\models\\Arrivallogger.php',
+  'adrian\\hook\\Plugin' => 'plugins\\adrian\\hook\\Plugin.php',
+  'Adrian\\Arrivallogger\\Controllers\\Arrivallogger' => 'plugins\\adrian\\arrivallogger\\controllers\\Arrivallogger.php',
+  'Adrian\\Hook\\Models\\Hook' => 'plugins\\adrian\\hook\\models\\Hook.php',
 );

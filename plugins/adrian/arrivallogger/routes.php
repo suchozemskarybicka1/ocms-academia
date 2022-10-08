@@ -16,4 +16,4 @@ Route::post('add-arrival', function () {
 
     return 'Arrival added';
 
-});php artisan plugin:remove
+});

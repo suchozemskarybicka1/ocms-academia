@@ -1,8 +1,8 @@
 <?php namespace Adrian\HookPlugin\Updates;
 
 use Schema;
-use October\Rain\Database\Schema\Blueprint;
 use October\Rain\Database\Updates\Migration;
+use October\Rain\Database\Schema\Blueprint;
 
 class CreateHookPluginsTable extends Migration
 {
@@ -11,6 +11,8 @@ class CreateHookPluginsTable extends Migration
         Schema::create('adrian_hookplugin_hook_plugins', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
+            $table->text('desc');
+            $table->text('skills');
             $table->timestamps();
         });
     }

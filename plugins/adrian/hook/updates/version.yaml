@@ -1,0 +1,4 @@
+1.0.1: First version of Hook
+1.0.2:
+  - create hook table
+  - create_hooks_table.php
