@@ -1,6 +1,7 @@
 <?php namespace Adrian\Hook\Models;
 
 use Model;
+use PhpParser\Node\Expr\StaticCall;
 
 /**
  * Hook Model
@@ -66,7 +67,7 @@ class Hook extends Model
     public $belongsTo = [
         'arrivallogger' => ['Adrian\Arrivallogger\Models\Arrivallogger']
     ];
-
+    
     public $belongsToMany = [];
     public $morphTo = [];
     public $morphOne = [];

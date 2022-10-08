@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Hook
+
+# Model Form Field configuration
+form: $/adrian/hook/models/hook/fields.yaml
+
+# Model Class name
+modelClass: Adrian\Hook\Models\Hook
+
+# Default redirect location
+defaultRedirect: adrian/hook/hook
+
+# Create page
+create:
+    title: Create Hook
+    redirect: adrian/hook/hook/update/:id
+    redirectClose: adrian/hook/hook
+
+# Update page
+update:
+    title: Edit Hook
+    redirect: adrian/hook/hook
+    redirectClose: adrian/hook/hook
+
+# Preview page
+preview:
+    title: Preview Hook

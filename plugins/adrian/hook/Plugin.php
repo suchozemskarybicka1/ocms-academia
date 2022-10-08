@@ -45,18 +45,25 @@ class Plugin extends PluginBase
      */
     public function boot()
     {
-        ArrivalloggerModel::extend(function($model){
-            $model->hasOne['hook'] = ['Adrian\Hook\Models\Hook'];
-        });
 
-        ArrivalloggerControllers::extendFormFields(function($form){
+        Event::listen('backend.list.extendColumns', function ($widget) {
+            // Only for the User controller
+            if (!$widget->getController() instanceof \Adrian\Arrivallogger\Controllers\Arrivallogger) {
+                return;
+            }
 
-            $form->addTabFields([
-                'hook[desc]' => [
+            // Only for the User model
+            if (!$widget->model instanceof \Adrian\Arrivallogger\Models\Arrivallogger) {
+                return;
+            }
+
+            // Add an extra birthday column
+            $widget->addColumns([
+                'desc' => [
                     'label' => 'Desc',
                     'type' => 'textarea',
                 ],
-                'hook[skills]' => [
+                'skills' => [
                     'label' => 'Skills',
                     'type' => 'textarea',
                 ],
