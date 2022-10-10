@@ -1,9 +1,9 @@
 <?php namespace Adrian\Hook;
 
+use Event;
 use Backend;
 use System\Classes\PluginBase;
-use Adrian\Arrivallogger\Models\Arrivallogger as ArrivalloggerModel;
-use Adrian\Arrivallogger\Controllers\Arrivallogger as ArrivalloggerControllers;
+
 
 /**
  * Hook Plugin Information File
@@ -46,19 +46,26 @@ class Plugin extends PluginBase
     public function boot()
     {
 
-        Event::listen('backend.list.extendColumns', function ($widget) {
-            // Only for the User controller
+
+        Event::listen('backend.form.extendFields', function($widget) {
+            // Only apply this listener when the Users controller is being used
             if (!$widget->getController() instanceof \Adrian\Arrivallogger\Controllers\Arrivallogger) {
                 return;
             }
 
-            // Only for the User model
+            // Only apply this listener when the User model is being modified
             if (!$widget->model instanceof \Adrian\Arrivallogger\Models\Arrivallogger) {
                 return;
             }
 
-            // Add an extra birthday column
-            $widget->addColumns([
+            // Only apply this listener when the Form widget in question is a root-level
+            // Form widget (not a repeater, nestedform, etc)
+            if ($widget->isNested) {
+                return;
+            }
+
+            // Add an extra birthday field
+            $widget->addFields([
                 'desc' => [
                     'label' => 'Desc',
                     'type' => 'textarea',

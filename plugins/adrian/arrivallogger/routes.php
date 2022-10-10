@@ -17,3 +17,11 @@ Route::post('add-arrival', function () {
     return 'Arrival added';
 
 });
+
+
+Route::get('orm', function () {
+
+    $log = Arrivallogger::where('name', 'LIKE', 'Jozo')->get();
+    return $log;
+
+});

@@ -8,17 +8,13 @@ class CreateHooksTable extends Migration
 {
     public function up()
     {
-        Schema::create('adrian_hook_hooks', function (Blueprint $table) {
-            $table->engine = 'InnoDB';
-            $table->increments('id');
+        Schema::table('adrian_arrivallogger_arrivalloggers', function (Blueprint $table) {
             $table->text('desc')->nullable();
             $table->text('skills')->nullable();
-            $table->timestamps();
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('adrian_hook_hooks');
     }
 }

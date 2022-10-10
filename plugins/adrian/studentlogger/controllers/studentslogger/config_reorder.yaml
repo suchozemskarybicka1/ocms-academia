@@ -1,4 +1,0 @@
-title: StudentsLogger
-modelClass: Adrian\StudentLogger\Models\StudentLogger
-toolbar:
-    buttons: reorder_toolbar
