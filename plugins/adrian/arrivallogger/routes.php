@@ -19,17 +19,17 @@ Route::post('add-arrival', function () {
 });
 
 
-Route::get('orm1', function () {
+Route::get('orm1/{name}', function ($name) {
 
-    $log = Arrivallogger::where('name', 'LIKE', 'Jozo')->get();
+    $log = Arrivallogger::where('name', 'LIKE', $name)->get();
     return $log;
 
 });
 
-Route::get('orm2', function () {
+Route::get('orm2/{name}/{late}', function ($name, $late) {
 
-    $log = Arrivallogger::where('name', 'LIKE', 'Jozo')
-        ->orWhere('late', 'LIKE', 1)
+    $log = Arrivallogger::where('name', 'LIKE', $name)
+        ->orWhere('late', 'LIKE', $late)
         ->get();
     return $log;
 
@@ -42,3 +42,4 @@ Route::get('orm3', function () {
     return $log;
 
 });
+
