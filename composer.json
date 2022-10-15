@@ -1,0 +1,11 @@
+{
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "kylekatarnls/update-helper": true
+        }
+    },
+    "require": {
+        "tymon/jwt-auth": "^1.0"
+    }
+}
